@@ -1,8 +1,7 @@
 package SpiceJet.flightbooking;
 
 import java.io.IOException;
-
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -43,6 +42,12 @@ public class LoginValidations extends InvokeBrowsers
 			{"qwe@gmail.com","qwe123","1st Data has been validated successfully."},
 			{"qwer@gmail.com","qwer1234","2nd Data has been validated successfully."}
 				};
+	}
+	
+	@AfterTest
+	public void closeBrowser()
+	{
+		driver.close();
 	}
 
 }

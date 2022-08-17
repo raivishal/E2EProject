@@ -1,21 +1,20 @@
 package SpiceJet.flightbooking;
 
 import java.io.IOException;
-
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
+
 import org.testng.annotations.Test;
 
 import baseclasses.*;
 import pageobjects.HomePage;
-import pageobjects.LoginPage;
+
 
 public class homePageValidations extends InvokeBrowsers{
 
 	HomePage obj;
 
-	@BeforeMethod
+	@BeforeTest
 	public void openBrowser() throws IOException
 	{
 		driver=triggerBrowser();
@@ -29,6 +28,12 @@ public class homePageValidations extends InvokeBrowsers{
 	{
 		obj.getLoginButton().click();
 
+	}
+	
+	@AfterTest
+	public void closeBrowser()
+	{
+		driver.close();
 	}
 
 	

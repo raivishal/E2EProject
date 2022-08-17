@@ -3,6 +3,7 @@ package SpiceJet.flightbooking;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -24,6 +25,14 @@ public class titleOfCourseSectionValidations extends InvokeBrowsers{
 		HomePage hpObj=new HomePage(driver);
 		Assert.assertEquals(hpObj.getTitleOfCoureseSection().getText(),"FEATURED COURSES");
 	}
+	
+	@AfterTest
+	public void closeBrowser()
+	{
+		driver.close();
+	}
+
+	
 	
 
 }

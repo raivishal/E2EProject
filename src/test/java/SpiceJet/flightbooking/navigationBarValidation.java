@@ -3,6 +3,7 @@ package SpiceJet.flightbooking;
 import java.io.IOException;
 
 import org.junit.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -25,5 +26,12 @@ public class navigationBarValidation extends InvokeBrowsers
 		HomePage hpObj=new HomePage(driver);
 		Assert.assertTrue(hpObj.getNavigationBar().isDisplayed());
 	}
+	
+	@AfterTest
+	public void closeBrowser()
+	{
+		driver.close();
+	}
+
 
 }

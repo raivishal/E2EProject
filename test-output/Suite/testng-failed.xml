@@ -6,6 +6,7 @@
       <class name="SpiceJet.flightbooking.homePageValidations">
         <methods>
           <include name="clickOnLogin"/>
+          <include name="closeBrowser"/>
           <include name="openBrowser"/>
         </methods>
       </class> <!-- SpiceJet.flightbooking.homePageValidations -->
