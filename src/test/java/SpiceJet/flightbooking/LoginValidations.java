@@ -1,6 +1,8 @@
 package SpiceJet.flightbooking;
 
 import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -12,6 +14,7 @@ import pageobjects.LoginPage;
 
 public class LoginValidations extends InvokeBrowsers
 {
+	WebDriver driver;
 
 	@BeforeTest
 	public void openBrowser() throws IOException

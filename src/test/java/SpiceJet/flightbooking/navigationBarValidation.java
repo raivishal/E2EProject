@@ -3,6 +3,7 @@ package SpiceJet.flightbooking;
 import java.io.IOException;
 
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -12,6 +13,7 @@ import pageobjects.HomePage;
 
 public class navigationBarValidation extends InvokeBrowsers
 {
+	WebDriver driver;
 	@BeforeTest
 	public void openBrowser() throws IOException
 	{

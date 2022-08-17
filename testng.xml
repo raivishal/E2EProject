@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="SpiceJet.flightbooking.navigationBarValidation"/>
-      <class name="SpiceJet.flightbooking.homePageValidations"/>
-      <class name="SpiceJet.flightbooking.titleOfCourseSectionValidations"/>
-      <class name="SpiceJet.flightbooking.LoginValidations"/>
-    </classes>
-  </test> <!-- Test -->
+<suite name="Suite" parallel="tests">
+<listeners>
+<listener class-name="SpiceJet.flightbooking.Listeners"></listener>
+</listeners>
+	<test thread-count="5" name="Testing navigation bar">
+		<classes>
+			<class name="SpiceJet.flightbooking.navigationBarValidation" />
+		</classes>
+	</test>
+	<test name="Testing home page elements">
+		<classes>
+			<class name="SpiceJet.flightbooking.homePageValidations" />
+		</classes>
+	</test>
+	<test name="Testing titleOfCourseSectionValidations">
+		<classes>
+			<class name="SpiceJet.flightbooking.titleOfCourseSectionValidations" />
+		</classes>
+	</test>
+	<test name="Testing login feature">
+		<classes>
+			<class name="SpiceJet.flightbooking.LoginValidations" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

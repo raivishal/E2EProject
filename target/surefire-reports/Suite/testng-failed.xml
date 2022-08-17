@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="5" name="Test(failed)" verbose="0">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="SpiceJet.flightbooking.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Testing titleOfCourseSectionValidations(failed)" verbose="0">
     <classes>
-      <class name="SpiceJet.flightbooking.homePageValidations">
+      <class name="SpiceJet.flightbooking.titleOfCourseSectionValidations">
         <methods>
-          <include name="clickOnLogin"/>
+          <include name="validateTitleOfCourseSection"/>
           <include name="closeBrowser"/>
           <include name="openBrowser"/>
         </methods>
-      </class> <!-- SpiceJet.flightbooking.homePageValidations -->
+      </class> <!-- SpiceJet.flightbooking.titleOfCourseSectionValidations -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Testing titleOfCourseSectionValidations(failed) -->
 </suite> <!-- Failed suite [Suite] -->
